@@ -25,7 +25,7 @@ const scrollSpy = () => {
       );
       if (entry.isIntersecting) {
         $links.forEach((link) => link.classList.remove('active'));
-        $link?.classList.add('active');
+        if ($link) $link.classList.add('active');
       }
     });
   };
