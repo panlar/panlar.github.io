@@ -74,6 +74,7 @@ a {
   min-height: calc(100vh - 5rem);
   overflow: hidden;
 }
+
 .indicator {
   position: absolute;
   top: 50vh;
