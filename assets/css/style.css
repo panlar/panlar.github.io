@@ -1,7 +1,10 @@
 :root {
   --bg-color: rgb(15, 22, 38);
   --text-color: rgb(245, 245, 245);
+  --text-dark-color: rgb(196, 196, 196);
+  --text-dark-code: 224, 224, 224;
   --primary-color: rgb(0, 102, 255);
+  --primary-dark-color: rgb(0, 93, 232);
   --bg-code: 15, 22, 38;
   --text-code: 245, 245, 245;
   --primary-code: 0, 102, 255;
@@ -82,7 +85,7 @@ a {
 
 .btn {
   font-family: Poppins;
-  font-weight: 300;
+  font-weight: 500;
   border: none;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -91,6 +94,11 @@ a {
   color: var(--bg-color);
   cursor: pointer;
   outline: none;
+  transition: .3s;
+}
+
+.btn:hover {
+  background-color: var(--text-dark-color);
 }
 
 .btn-primary {
@@ -98,9 +106,18 @@ a {
   color: var(--text-color);
 }
 
+.btn-primary:hover {
+  background-color: var(--primary-dark-color);
+  box-shadow: 0 10px 10px rgba(var(--primary-code), 0.1);
+}
+
 .btn-secondary {
   background-color: rgba(var(--text-code), 0.2);
   color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(var(--text-dark-code), 0.5);
 }
 
 /* TODO: <<<NAVBAR>>> */
@@ -332,6 +349,13 @@ nav {
   gap: 0.5rem;
 }
 
+.blog-card code {
+  display: inline-block;
+  padding: 0.25rem;
+  background-color: rgba(var(--text-code), 0.1);
+  border-radius: 0.25rem;
+}
+
 .blog-img {
   overflow: hidden;
 }
@@ -500,7 +524,7 @@ footer {
   }
 
   .about img {
-    aspect-ratio: 16/9;
+    aspect-ratio: 3/4;
     width: 100%;
   }
 
@@ -533,6 +557,11 @@ footer {
     width: 100%;
     position: static;
     transform: initial !important;
+  }
+
+  .portfolio-resume .btn {
+    display: block;
+    width: 100%;
   }
 
   /* TODO: <<<CONTACT>>> */
